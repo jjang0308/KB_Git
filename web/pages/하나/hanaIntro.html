@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <title>자기소개 페이지</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+    }
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+    button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background-color: #357ABD;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>자기소개</h1>
+</header>
+<main>
+    <section id="intro" style="display: flex; align-items: center; gap: 2rem;">
+        <img src="귀여운거.jpg" alt="하루사진" 
+             style="width:150px; height:150px; object-fit: cover; border-radius:50%;">
+        <div>
+          <h2>안녕하세요!</h2>
+          <p>저는 김하나입니다. 사진은 하루예요.</p>
+        </div>
+      </section>
+      <section id="age">
+        <h2>나이</h2>
+        <p>2002년생</p>
+      </section>
+
+  <section id="hobbies">
+    <h2>취미</h2>
+    <p>🌱 게임하기</p>
+    <p>🌱 식물키우기</p>
+    <p>🌱 하루랑 붙어있기</p>
+  </section>
+
+  <button onclick="showMessage()"> 💗 좋아요</button>
+</main>
+
+<script>
+    function showMessage() {
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
+
+</body>
+</html>
